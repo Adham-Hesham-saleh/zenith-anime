@@ -1,38 +1,208 @@
-.App {
-  text-align: center;
+/* Dark anime theme website */
+body {
+  background-color: #0b0b0b; 
+  color: #ffffff;
+  margin: 0;
+  font-family: 'Segoe UI', sans-serif;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.navbar {
+  background-color: #1a1a1a !important; 
+  border-bottom: 2px solid #e50914; 
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.navbar-nav .nav-link {
+  color: #fff !important;
+  cursor: pointer;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.navbar-nav .nav-link.active {
+  color: #e50914 !important;
+}
+
+.btn-primary {
+  background-color: #e50914 !important;
+  border: none;
+}
+
+.hero-section {
+  background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), 
+              url('https://wallpaper.forfun.com/fetch/8d/8dce60bf49b50ef911bdda29748cf483.jpeg'); 
+  background-size: cover;
+  background-position: center;
+  min-height: 80vh;
   display: flex;
-  flex-direction: column;
   align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
+  text-align: center;
+  flex-direction: column;
+}
+
+.hero-section-small {
+  background: linear-gradient(rgba(0, 0, 0, 0.85), rgba(0, 0, 0, 0.85)), 
+              url('https://wallpaper.forfun.com/fetch/8d/8dce60bf49b50ef911bdda29748cf483.jpeg'); 
+  background-size: cover;
+  background-position: center;
+  min-height: 280px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  flex-direction: column;
+  padding: 30px 0;
+}
+
+.search-container {
+  width: 100%;
+  max-width: 600px;
+}
+
+.search-input {
+  border-radius: 20px;
+  padding: 25px;
+  font-size: 1.2rem;
+  background: rgba(255, 255, 255, 0.9) ;
+}
+
+/* Anime Card Styling */
+.anime-img-container {
+  width: 100%;
+  aspect-ratio: 2 / 3; 
+  overflow: hidden;
+  border-radius: 8px;
+  background-color: #1a1a1a;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.anime-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover; 
+  transition: transform 0.4s ease;
+}
+
+.anime-img:hover {
+  transform: scale(1.1);
+}
+
+.anime-title-wrapper {
+  height: 50px; 
+  margin-top: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+}
+
+.anime-title {
   color: white;
+  font-weight: 500;
+  font-size: 0.9rem;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  width: 100%;
 }
 
-.App-link {
-  color: #61dafb;
+.anime-list .row {
+  justify-content: center;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+/* Anime card links — no underline, keep text white */
+.anime-list a,
+.anime-list a:hover,
+.anime-list a:focus {
+  text-decoration: none;
+  color: inherit;
+}
+
+/* Footer links */
+footer a {
+  text-decoration: none;
+}
+
+footer a:hover {
+  color: #e50914 ;
+}
+
+/* === Forms (Auth + Contact) === */
+.auth-container,
+.contact-container {
+  min-height: 80vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  padding: 60px 15px;
+}
+
+.auth-card {
+  background-color: #1a1a1a;
+  border: 1px solid #333;
+  border-radius: 10px;
+  padding: 40px;
+  width: 100%;
+  max-width: 450px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+}
+
+.contact-container .auth-card {
+  max-width: 100%;
+}
+
+.auth-card .form-control,
+.contact-container .form-control {
+  background-color: #0b0b0b;
+  border: 1px solid #444;
+  color: #fff;
+  padding: 12px;
+  border-radius: 6px;
+}
+
+.auth-card .form-control:focus,
+.contact-container .form-control:focus {
+  background-color: #0b0b0b;
+  border-color: #e50914;
+  color: #fff;
+  box-shadow: 0 0 0 0.2rem rgba(229, 9, 20, 0.25);
+}
+
+.auth-card .form-control::placeholder,
+.contact-container .form-control::placeholder {
+  color: #666;
+}
+
+.auth-card .is-invalid,
+.contact-container .is-invalid {
+  border-color: #dc3545 !important;
+}
+
+.auth-card .invalid-feedback,
+.contact-container .invalid-feedback {
+  display: block;
+  color: #ff6b6b;
+  font-size: 0.85rem;
+  margin-top: 0.25rem;
+}
+
+.auth-card label,
+.contact-container label {
+  font-weight: 500;
+  margin-bottom: 0.5rem;
+}
+
+.auth-card .btn-danger,
+.contact-container .btn-danger {
+  background-color: #e50914;
+  border: none;
+  padding: 12px;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.auth-card .btn-danger:hover,
+.contact-container .btn-danger:hover {
+  background-color: #b00710;
 }
