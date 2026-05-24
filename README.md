@@ -39,3 +39,5 @@ A responsive anime browsing web application built with React.js and Bootstrap.
 ## Team
 
 - Adham
+- seif
+  
